@@ -1,8 +1,10 @@
 $(document).ready(function(){
 
-  $('#gameboard').on('click', function(){
-    console.log("Board Clicked!");
-  })
 
+    var $gameCells = $('.cell');
+
+  $($gameCells).one('click', function(){
+      console.log(this.id);
+  });
 
 });
