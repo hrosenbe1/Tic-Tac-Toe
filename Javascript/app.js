@@ -3,10 +3,10 @@ $(document).ready(function() {
 
   var PlayerTwo = "X";
   var PlayerOne = "O";
-  var winner;
+  var Tie;
+  var winner = "Default"
   var $gameCells = $('.cell');
   var moves = ["#0", "#1", "#2", "#3", "#4", "#5", "#6", "#7", "#8"];
-  //Array(9).join(".").split(".");
   var count = 0;
 
   $($gameCells).one('click', function() {
@@ -20,10 +20,9 @@ $(document).ready(function() {
       $(this).text("O");
     }
     console.log(moves, count);
-  })
+  });
 
   $(".cell").click(function() {
-    $(moves[this.id]).text(PlayerOne);
     if ((winner !== PlayerTwo) && $("#0").text() === PlayerOne && $("#1").text() === PlayerOne && $("#2").text() === PlayerOne ||
       $("#3").text() === PlayerOne && $("#4").text() === PlayerOne && $("#5").text() === PlayerOne ||
       $("#6").text() === PlayerOne && $("#7").text() === PlayerOne && $("#8").text() === PlayerOne ||
@@ -34,12 +33,7 @@ $(document).ready(function() {
       $("#2").text() === PlayerOne && $("#4").text() === PlayerOne && $("#6").text() === PlayerOne) {
       winner = "PlayerOne";
       alert("Congratulations, Player 1 wins!");
-    }
-  });
-
-  $(".cell").click(function() {
-    $(moves[this.id]).text(PlayerTwo);
-    if ((winner !== PlayerOne) && $("#0").text() === PlayerTwo && $("#1").text() === PlayerTwo && $("#2").text() === PlayerTwo ||
+    } else if ((winner !== PlayerOne) && $("#0").text() === PlayerTwo && $("#1").text() === PlayerTwo && $("#2").text() === PlayerTwo ||
       $("#3").text() === PlayerTwo && $("#4").text() === PlayerTwo && $("#5").text() === PlayerTwo ||
       $("#6").text() === PlayerTwo && $("#7").text() === PlayerTwo && $("#8").text() === PlayerTwo ||
       $("#0").text() === PlayerTwo && $("#3").text() === PlayerTwo && $("#6").text() === PlayerTwo ||
@@ -49,16 +43,28 @@ $(document).ready(function() {
       $("#2").text() === PlayerTwo && $("#4").text() === PlayerTwo && $("#6").text() === PlayerTwo) {
       winner = "PlayerOne";
       alert("Congratulations, Player 2 wins!");
-    }
-    if (count === 9 && winner !== "PlayerOne" && winner !== "PlayerTwo") {
+    } else if (count === 9 && winner !== "PlayerOne" && winner !== "PlayerTwo") {
+      winner = "Tie";
       alert("It's a Tie");
+    };
+
+    $("#winner").click(function() {
+      clearBoard();
+    });
+
+    function clearBoard() {
+      moves = ["#0", "#1", "#2", "#3", "#4", "#5", "#6", "#7", "#8"];
+      $("#0").empty();
+      $("#1").empty();
+      $("#2").empty();
+      $("#3").empty();
+      $("#4").empty();
+      $("#5").empty();
+      $("#6").empty();
+      $("#7").empty();
+      $("#8").empty();
+      count = 0;
+      winner = "Default";
     }
   });
-
-  $("#winner").click(function() {
-  $("#gameboard div").text('');
-});
-
-
-
 });
