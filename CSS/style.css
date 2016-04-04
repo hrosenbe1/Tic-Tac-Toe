@@ -1,6 +1,7 @@
 body {
   font-size: 10px;
   font-family: Montserrat;
+  background-color: #bdbdbd;
 }
 
 #gameboard {
@@ -14,7 +15,7 @@ body {
   color: #48484b;
   margin: 250px 0px 0px 0px;
   font-size: 10px;
-  text-shadow: 2px 2px 2px #48484b;
+  text-shadow: 2px 2px 2px white;
 }
 
 #button {
@@ -23,7 +24,7 @@ body {
   width: 100px;
   height: 70px;
   text-align: center;
-  text-shadow: 2px 2px 2px #48484b;
+  text-shadow: 2px 2px 2px white;
   font-size: 20px;
   font-family: Montserrat;
   border-radius: 15px;
@@ -34,7 +35,7 @@ body {
 }
 
 .cell {
-  color: #48484b;
+  background-color: white;
   border: #00b6aa solid 5px;
   width: 94px;
   height: 94px;
@@ -51,5 +52,5 @@ h1 {
   color: #48484b;
   margin: 5px 0px -40px 250px;
   font-size: 37px;
-  text-shadow: 2px 2px 2px #48484b;
+  text-shadow: 2px 2px 2px white;
 }
