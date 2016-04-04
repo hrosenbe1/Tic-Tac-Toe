@@ -50,6 +50,7 @@ $(document).ready(function() {
 
     $("#winner").click(function() {
       count = 0;
+      winner = "Default";
       $(".cell").empty();
     });
 
