@@ -9,7 +9,7 @@ $(document).ready(function() {
   var moves = ["#0", "#1", "#2", "#3", "#4", "#5", "#6", "#7", "#8"];
   var count = 0;
 
-  $($gameCells).one('click', function() {
+  $($gameCells).on('click', function() {
     moves[this.id] = this.id;
     count++;
     if (count % 2 == 0) {
@@ -49,22 +49,9 @@ $(document).ready(function() {
     };
 
     $("#winner").click(function() {
-      clearBoard();
+      count = 0;
+      $(".cell").empty();
     });
 
-    function clearBoard() {
-      moves = ["#0", "#1", "#2", "#3", "#4", "#5", "#6", "#7", "#8"];
-      $("#0").empty();
-      $("#1").empty();
-      $("#2").empty();
-      $("#3").empty();
-      $("#4").empty();
-      $("#5").empty();
-      $("#6").empty();
-      $("#7").empty();
-      $("#8").empty();
-      count = 0;
-      winner = "Default";
-    }
   });
 });
