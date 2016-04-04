@@ -9,6 +9,8 @@ $(document).ready(function() {
   var moves = ["#0", "#1", "#2", "#3", "#4", "#5", "#6", "#7", "#8"];
   var count = 0;
 
+
+  //This function adds an X  for player 1 and an O for player 2 for the cell that is clicked
   $($gameCells).on('click', function() {
     moves[this.id] = this.id;
     count++;
@@ -22,6 +24,8 @@ $(document).ready(function() {
     console.log(moves, count);
   });
 
+
+  //This function gets the winner depending on which cells have X or O and then alerts who the winner is
   $(".cell").click(function() {
     if ((winner !== PlayerTwo) && $("#0").text() === PlayerOne && $("#1").text() === PlayerOne && $("#2").text() === PlayerOne ||
       $("#3").text() === PlayerOne && $("#4").text() === PlayerOne && $("#5").text() === PlayerOne ||
@@ -48,6 +52,8 @@ $(document).ready(function() {
       alert("It's a Tie");
     };
 
+
+    //When New Game button is clicked the game is reset
     $("#winner").click(function() {
       count = 0;
       winner = "Default";
