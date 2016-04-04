@@ -36,7 +36,7 @@ $(document).ready(function() {
       $("#0").text() === PlayerOne && $("#4").text() === PlayerOne && $("#8").text() === PlayerOne ||
       $("#2").text() === PlayerOne && $("#4").text() === PlayerOne && $("#6").text() === PlayerOne) {
       winner = "PlayerOne";
-      alert("Congratulations, Player 1 wins!");
+      document.getElementById("score").innerHTML = "<h1>Congratulations, Player 1 wins!</h1";
     } else if ((winner !== PlayerOne) && $("#0").text() === PlayerTwo && $("#1").text() === PlayerTwo && $("#2").text() === PlayerTwo ||
       $("#3").text() === PlayerTwo && $("#4").text() === PlayerTwo && $("#5").text() === PlayerTwo ||
       $("#6").text() === PlayerTwo && $("#7").text() === PlayerTwo && $("#8").text() === PlayerTwo ||
@@ -46,17 +46,20 @@ $(document).ready(function() {
       $("#0").text() === PlayerTwo && $("#4").text() === PlayerTwo && $("#8").text() === PlayerTwo ||
       $("#2").text() === PlayerTwo && $("#4").text() === PlayerTwo && $("#6").text() === PlayerTwo) {
       winner = "PlayerOne";
-      alert("Congratulations, Player 2 wins!");
+      document.getElementById("score").innerHTML = "<h1>Congratulations, Player 2 wins!</h1";
     } else if (count === 9 && winner !== "PlayerOne" && winner !== "PlayerTwo") {
       winner = "Tie";
-      alert("It's a Tie");
+      document.getElementById("score").innerHTML = "<h1>It's a Tie!</h1";
     };
+
+
 
 
     //When New Game button is clicked the game is reset
     $("#winner").click(function() {
       count = 0;
       winner = "Default";
+      document.getElementById("score").innerHTML =" ";
       $(".cell").empty();
     });
 
