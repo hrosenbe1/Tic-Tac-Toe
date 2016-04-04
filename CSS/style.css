@@ -1,25 +1,55 @@
 body {
   font-size: 10px;
+  font-family: Montserrat;
 }
 
 #gameboard {
-  width: 31.2em;
-  height: 31.2em;
-  margin: 0 auto;
-}
-
-.cell {
-  border: red solid 1px;
-  width: 10em;
-  height: 10em;
-  float: left;
-  text-align: center;
-}
-
-.row {
-
+  width: 312px;
+  height: 312x;
+  margin-top: 70px;
+  margin-left: 350px;
 }
 
 #score {
-  float: right;
+  color: #48484b;
+  margin: 250px 0px 0px 0px;
+  font-size: 10px;
+  text-shadow: 2px 2px 2px #48484b;
+}
+
+#button {
+  color: #48484b;
+  border: #00b6aa solid 5px;
+  width: 100px;
+  height: 70px;
+  text-align: center;
+  text-shadow: 2px 2px 2px #48484b;
+  font-size: 20px;
+  font-family: Montserrat;
+  border-radius: 15px;
+  box-shadow: 9px 9px 5px #000000;
+  margin-left: 100px;
+  margin-top: 20px;
+  text-decoration: none;
+}
+
+.cell {
+  color: #48484b;
+  border: #00b6aa solid 5px;
+  width: 94px;
+  height: 94px;
+  float: left;
+  text-align: center;
+  text-shadow: 5px 5px 5px #48484b;
+  font-size: 70px;
+  font-family: Montserrat;
+  border-radius: 15px;
+  box-shadow: 9px 9px 5px #000000;
+}
+
+h1 {
+  color: #48484b;
+  margin: 5px 0px -40px 250px;
+  font-size: 37px;
+  text-shadow: 2px 2px 2px #48484b;
 }

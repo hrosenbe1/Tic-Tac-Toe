@@ -49,14 +49,14 @@ $(document).ready(function() {
       document.getElementById("score").innerHTML = "<h1>Congratulations, Player 2 wins!</h1";
     } else if (count === 9 && winner !== "PlayerOne" && winner !== "PlayerTwo") {
       winner = "Tie";
-      document.getElementById("score").innerHTML = "<h1>It's a Tie!</h1";
+      document.getElementById("score").innerHTML = "<h1>It's a tie! Better luck next time.</h1";
     };
 
 
 
 
     //When New Game button is clicked the game is reset
-    $("#winner").click(function() {
+    $("#button").click(function() {
       count = 0;
       winner = "Default";
       document.getElementById("score").innerHTML =" ";
