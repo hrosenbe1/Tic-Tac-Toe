@@ -14,7 +14,7 @@ $(document).ready(function() {
 
   //function adds an X  for player 1 and an O for player 2 for the cell that is clicked
   function startGame() {
-    $($gameCells).on('click', function() {
+    $($gameCells).one('click', function() {
       moves[this.id] = this.id;
       count++;
       if (count % 2 == 0) {
