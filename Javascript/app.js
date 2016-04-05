@@ -43,7 +43,7 @@ $(document).ready(function() {
         winner = "PlayerOne";
         score1++;
         document.getElementById("winner").innerHTML = "<h1>Congratulations, Player 1 wins!</h1";
-        document.getElementById("score").innerHTML = "<div>Player 1 has won " + score1 + " game(s)!</div>";
+        document.getElementById("score1").innerHTML = "<div>Player 1 has won " + score1 + " game(s)!</div>";
         $($gameCells).off('click');
 
 
@@ -59,7 +59,7 @@ $(document).ready(function() {
         winner = "PlayerTwo";
         score2++
         document.getElementById("winner").innerHTML = "<h1>Congratulations, Player 2 wins!</h1>";
-        document.getElementById("score").innerHTML = "<div>Player 2 has won " + score2 + " game(s)!</div>";
+        document.getElementById("score2").innerHTML = "<div>Player 2 has won " + score2 + " game(s)!</div>";
         $($gameCells).off('click');
 
 
@@ -77,7 +77,7 @@ $(document).ready(function() {
     count = 0;
     winner = "Default";
     document.getElementById("winner").innerHTML = " ";
-    document.getElementById("score").innerHTML = " ";
+    /*document.getElementById("score").innerHTML = " ";*/
     $($gameCells).empty();
     startGame();
   });
