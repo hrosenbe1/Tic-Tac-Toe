@@ -10,6 +10,7 @@ $(document).ready(function() {
   var count = 0;
   var score1 = 0;
   var score2 = 0;
+  var audio = new Audio('5_Sec_Crowd_Cheer-Mike_Koenig-1562033255.mp3');
 
 
   //function adds an X  for player 1 and an O for player 2 for the cell that is clicked
@@ -45,6 +46,7 @@ $(document).ready(function() {
         $("#2").text() === PlayerOne && $("#4").text() === PlayerOne && $("#6").text() === PlayerOne) {
         winner = "PlayerOne";
         score1++;
+        audio.play();
         document.getElementById("winner").innerHTML = "<h1>Congratulations, Player 1 wins!</h1";
         document.getElementById("score1").innerHTML = "<div>Player 1 has won " + score1 + " game(s)!</div>";
         $($gameCells).off('click');
@@ -59,6 +61,7 @@ $(document).ready(function() {
         $("#2").text() === PlayerTwo && $("#4").text() === PlayerTwo && $("#6").text() === PlayerTwo) {
         winner = "PlayerTwo";
         score2++
+        audio.play();
         document.getElementById("winner").innerHTML = "<h1>Congratulations, Player 2 wins!</h1>";
         document.getElementById("score2").innerHTML = "<div>Player 2 has won " + score2 + " game(s)!</div>";
         $($gameCells).off('click');
@@ -88,3 +91,5 @@ $(document).ready(function() {
   });
 
 });
+
+

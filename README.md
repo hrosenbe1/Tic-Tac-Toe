@@ -1,1 +1,24 @@
-## Tic Tac Toe Project
+#Tic Tac Toe
+
+
+## Overview:
+
+Tic Tac Toe is a two player game where one player is X and the other player is O. The board consists of 9 squares that each player can choose from. Only one square can be played at a time during a current game. Once a player has either all X's or O's in a row vertically, horizontally, or diagonally the game is over and a winner is declared.
+
+<http://hrosenbe1.github.io/Tic-Tac-Toe/>
+
+## Project Notes:
+
+I chose to make this game because this is my first app in Javascript/Jquery and thought it would be a good challenge for me. I initially experimented with image mapping but chose not to go that route due to the fact I wasn't pleased with the visual design. The only library in use is jQuery to speed development time.
+
+##Technologies Used:
+
+- Languages - HTML5, CSS3, jQuery
+- Design - Google Fonts, gliffy.com (wireframe), Adobe Photoshop
+- Project Planning & User Stories - [Trello](https://trello.com/b/QtncqEOR/tic-tac-toe)
+- Sublime Text 3
+
+##WireFrame:
+
+
+
