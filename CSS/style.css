@@ -1,4 +1,5 @@
 body {
+  margin-top: 40px;
   font-size: 10px;
   font-family: Montserrat;
   background-color: #bdbdbd;
@@ -11,9 +12,9 @@ body {
   margin-left: 350px;
 }
 
-#score {
+#winner {
   color: #48484b;
-  margin: 250px 0px 0px 0px;
+  margin: 270px 0px 0px 0px;
   font-size: 10px;
   text-shadow: 2px 2px 2px white;
 }
@@ -31,7 +32,7 @@ body {
   box-shadow: 9px 9px 5px #000000;
   margin-left: 100px;
   margin-top: 20px;
-  text-decoration: none;
+  outline: none;
 }
 
 .cell {
@@ -46,11 +47,34 @@ body {
   font-family: Montserrat;
   border-radius: 15px;
   box-shadow: 9px 9px 5px #000000;
+  color: white;
 }
 
 h1 {
   color: #48484b;
-  margin: 5px 0px -40px 250px;
+  margin: 5px 0px -30px 250px;
   font-size: 37px;
   text-shadow: 2px 2px 2px white;
 }
+
+.XorO {
+  color: #48484b;
+  font-size: 27px;
+  text-shadow: 2px 2px 2px white;
+  margin-top: 182px;
+  float: left;
+  margin-left: 100px;
+  padding: 10px;
+}
+
+.score {
+  color: #48484b;
+  font-size: 37px;
+  text-shadow: 2px 2px 2px white;
+  margin-top: 200px;
+  float: right;
+  margin-left: 100px;
+}
+
+
+
