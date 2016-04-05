@@ -13,68 +13,73 @@ $(document).ready(function() {
 
 
   //This function adds an X  for player 1 and an O for player 2 for the cell that is clicked
-    function startGame(){
+  function startGame() {
     $($gameCells).on('click', function() {
-    moves[this.id] = this.id;
-    count++;
-    if (count % 2 == 0) {
-      moves[this.id] = "X";
-      $(this).text("X");
-    } else {
-      moves[this.id] = "O";
-      $(this).text("O");
-    }
-    console.log(moves, count);
-  });
-      getWinner();
-}
+      moves[this.id] = this.id;
+      count++;
+      if (count % 2 == 0) {
+        moves[this.id] = "X";
+        $(this).text("X");
+      } else {
+        moves[this.id] = "O";
+        $(this).text("O");
+      }
+      console.log(moves, count);
+    });
+    getWinner();
+  }
   startGame();
   //This function gets the winner depending on which cells have X or O and then alerts who the winner is
-  function getWinner(){
-  $($gameCells).on('click',function() {
-    if ((winner !== PlayerTwo) && $("#0").text() === PlayerOne && $("#1").text() === PlayerOne && $("#2").text() === PlayerOne ||
-      $("#3").text() === PlayerOne && $("#4").text() === PlayerOne && $("#5").text() === PlayerOne ||
-      $("#6").text() === PlayerOne && $("#7").text() === PlayerOne && $("#8").text() === PlayerOne ||
-      $("#0").text() === PlayerOne && $("#3").text() === PlayerOne && $("#6").text() === PlayerOne ||
-      $("#1").text() === PlayerOne && $("#4").text() === PlayerOne && $("#7").text() === PlayerOne ||
-      $("#2").text() === PlayerOne && $("#5").text() === PlayerOne && $("#8").text() === PlayerOne ||
-      $("#0").text() === PlayerOne && $("#4").text() === PlayerOne && $("#8").text() === PlayerOne ||
-      $("#2").text() === PlayerOne && $("#4").text() === PlayerOne && $("#6").text() === PlayerOne) {
-      winner = "PlayerOne";
-      document.getElementById("winner").innerHTML = "<h1>Congratulations, Player 1 wins!</h1";
-      $($gameCells).off('click');
-      score1++;
+  function getWinner() {
+    $($gameCells).on('click', function() {
+      if ((winner !== PlayerTwo) && $("#0").text() === PlayerOne && $("#1").text() === PlayerOne && $("#2").text() === PlayerOne ||
+        $("#3").text() === PlayerOne && $("#4").text() === PlayerOne && $("#5").text() === PlayerOne ||
+        $("#6").text() === PlayerOne && $("#7").text() === PlayerOne && $("#8").text() === PlayerOne ||
+        $("#0").text() === PlayerOne && $("#3").text() === PlayerOne && $("#6").text() === PlayerOne ||
+        $("#1").text() === PlayerOne && $("#4").text() === PlayerOne && $("#7").text() === PlayerOne ||
+        $("#2").text() === PlayerOne && $("#5").text() === PlayerOne && $("#8").text() === PlayerOne ||
+        $("#0").text() === PlayerOne && $("#4").text() === PlayerOne && $("#8").text() === PlayerOne ||
+        $("#2").text() === PlayerOne && $("#4").text() === PlayerOne && $("#6").text() === PlayerOne) {
+        winner = "PlayerOne";
+        score1++;
+        document.getElementById("winner").innerHTML = "<h1>Congratulations, Player 1 wins!</h1";
+        document.getElementById("score").innerHTML = "<div>Player 1 has won " + score1 + " game(s)!</div>";
+        $($gameCells).off('click');
 
-      console.log(score1);
-    } else if ((winner !== PlayerOne) && $("#0").text() === PlayerTwo && $("#1").text() === PlayerTwo && $("#2").text() === PlayerTwo ||
-      $("#3").text() === PlayerTwo && $("#4").text() === PlayerTwo && $("#5").text() === PlayerTwo ||
-      $("#6").text() === PlayerTwo && $("#7").text() === PlayerTwo && $("#8").text() === PlayerTwo ||
-      $("#0").text() === PlayerTwo && $("#3").text() === PlayerTwo && $("#6").text() === PlayerTwo ||
-      $("#1").text() === PlayerTwo && $("#4").text() === PlayerTwo && $("#7").text() === PlayerTwo ||
-      $("#2").text() === PlayerTwo && $("#5").text() === PlayerTwo && $("#8").text() === PlayerTwo ||
-      $("#0").text() === PlayerTwo && $("#4").text() === PlayerTwo && $("#8").text() === PlayerTwo ||
-      $("#2").text() === PlayerTwo && $("#4").text() === PlayerTwo && $("#6").text() === PlayerTwo) {
-      winner = "PlayerTwo";
-      document.getElementById("winner").innerHTML = "<h1>Congratulations, Player 2 wins!</h1>";
-      $($gameCells).off('click');
-      score2++
-    } else if (count === 9 && winner !== "PlayerOne" && winner !== "PlayerTwo") {
-      winner = "Tie";
-      document.getElementById("winner").innerHTML = "<h1>It's a tie! Better luck next time.</h1>";
-      $($gameCells).off('click');
-    };
-});
 
-}
+        console.log(score1);
+      } else if ((winner !== PlayerOne) && $("#0").text() === PlayerTwo && $("#1").text() === PlayerTwo && $("#2").text() === PlayerTwo ||
+        $("#3").text() === PlayerTwo && $("#4").text() === PlayerTwo && $("#5").text() === PlayerTwo ||
+        $("#6").text() === PlayerTwo && $("#7").text() === PlayerTwo && $("#8").text() === PlayerTwo ||
+        $("#0").text() === PlayerTwo && $("#3").text() === PlayerTwo && $("#6").text() === PlayerTwo ||
+        $("#1").text() === PlayerTwo && $("#4").text() === PlayerTwo && $("#7").text() === PlayerTwo ||
+        $("#2").text() === PlayerTwo && $("#5").text() === PlayerTwo && $("#8").text() === PlayerTwo ||
+        $("#0").text() === PlayerTwo && $("#4").text() === PlayerTwo && $("#8").text() === PlayerTwo ||
+        $("#2").text() === PlayerTwo && $("#4").text() === PlayerTwo && $("#6").text() === PlayerTwo) {
+        winner = "PlayerTwo";
+        score2++
+        document.getElementById("winner").innerHTML = "<h1>Congratulations, Player 2 wins!</h1>";
+        document.getElementById("score").innerHTML = "<div>Player 2 has won " + score2 + " game(s)!</div>";
+        $($gameCells).off('click');
 
-    //When New Game button is clicked the game is reset
-    $("#button").on('click', function() {
-      count = 0;
-      winner = "Default";
-      document.getElementById("winner").innerHTML =" ";
-      $($gameCells).empty();
-      startGame();
-     });
 
+      } else if (count === 9 && winner !== "PlayerOne" && winner !== "PlayerTwo") {
+        winner = "Tie";
+        document.getElementById("winner").innerHTML = "<h1>It's a tie! Better luck next time.</h1>";
+        $($gameCells).off('click');
+      };
     });
 
+  }
+
+  //When New Game button is clicked the game is reset
+  $("#button").on('click', function() {
+    count = 0;
+    winner = "Default";
+    document.getElementById("winner").innerHTML = " ";
+    document.getElementById("score").innerHTML = " ";
+    $($gameCells).empty();
+    startGame();
+  });
+
+});

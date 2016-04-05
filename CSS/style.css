@@ -7,14 +7,14 @@ body {
 
 #gameboard {
   width: 312px;
-  height: 312x;
+  height: 312px;
   margin-top: 70px;
   margin-left: 350px;
 }
 
 #winner {
   color: #48484b;
-  margin: 270px 0px 0px 0px;
+  margin: 50px 0px 0px 0px;
   font-size: 10px;
   text-shadow: 2px 2px 2px white;
 }
@@ -30,9 +30,12 @@ body {
   font-family: Montserrat;
   border-radius: 15px;
   box-shadow: 9px 9px 5px #000000;
-  margin-left: 100px;
-  margin-top: 20px;
+  float: right;
   outline: none;
+  margin-right: 300px;
+  margin-top: -260px;
+
+
 }
 
 .cell {
@@ -67,13 +70,14 @@ h1 {
   padding: 10px;
 }
 
-.score {
+#score {
   color: #48484b;
-  font-size: 37px;
+  font-size: 20px;
   text-shadow: 2px 2px 2px white;
-  margin-top: 200px;
   float: right;
-  margin-left: 100px;
+  outline: none;
+  margin-right: 140px;
+  margin-top: -100px;
 }
 
 
