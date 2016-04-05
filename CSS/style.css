@@ -29,13 +29,28 @@ body {
   font-size: 20px;
   font-family: Montserrat;
   border-radius: 15px;
-  box-shadow: 9px 9px 5px #000000;
+  box-shadow: 10px 10px 5px #000000;
   float: right;
   outline: none;
   margin-right: 300px;
   margin-top: -260px;
+}
 
-
+#clearScore {
+  color: #48484b;
+  border: #00b6aa solid 5px;
+  width: 100px;
+  height: 70px;
+  text-align: center;
+  text-shadow: 2px 2px 2px white;
+  font-size: 20px;
+  font-family: Montserrat;
+  border-radius: 15px;
+  box-shadow: 10px 10px 5px #000000;
+  float: right;
+  outline: none;
+  margin-right: 175px;
+  margin-top: -260px;
 }
 
 .cell {
@@ -49,7 +64,7 @@ body {
   font-size: 70px;
   font-family: Montserrat;
   border-radius: 15px;
-  box-shadow: 9px 9px 5px #000000;
+  box-shadow: 10px 10px 5px #000000;
   color: white;
 }
 
@@ -89,6 +104,7 @@ h1 {
   margin-right: 140px;
   margin-top: -70px;
 }
+
 
 
 

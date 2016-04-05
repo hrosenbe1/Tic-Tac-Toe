@@ -79,4 +79,12 @@ $(document).ready(function() {
     $($gameCells).empty();
     startGame();
   });
+
+  $("#clearScore").on('click', function() {
+    document.getElementById("score1").innerHTML = " ";
+    document.getElementById("score2").innerHTML = " ";
+    score1 = 0;
+    score2 = 0;
+  });
+
 });
