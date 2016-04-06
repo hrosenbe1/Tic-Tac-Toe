@@ -18,17 +18,17 @@ I chose to make this game because this is my first app in Javascript/Jquery and 
 - Project Planning & User Stories - [Trello](https://trello.com/b/QtncqEOR/tic-tac-toe)
 - Sublime Text 3
 
-##Bonus Features:  
+##Bonus Features:
 
-- Each player can input their name and it will appear on screen where the score is kept  
-- The game automatically keeps score for each play and display is kept on screen until the Clear Score button is clicked  
+- Each player can input their name and it will appear on screen where the score is kept
+- The game automatically keeps score for each play and display is kept on screen until the Clear Score button is clicked
 - After each game where there is a winner an audio file plays of a crowd cheering
 
 ##WireFrame:
 
-![](/Users/CodeMac/Desktop/ttt\ wireframe.png) 
+![](/Users/CodeMac/ga/wdi/Projects/Tic\ Tac\ Toe/ttt\ wireframe.png)
 
-##Future Developments:  
+##Future Developments:
 
 - I would like to make this game responsive
 
