@@ -1,6 +1,5 @@
 $(document).ready(function() {
 
-
   var PlayerTwo = "X";
   var PlayerOne = "O";
   var Tie;
@@ -11,7 +10,6 @@ $(document).ready(function() {
   var score1 = 0;
   var score2 = 0;
   var audio = new Audio('5_Sec_Crowd_Cheer-Mike_Koenig-1562033255.mp3');
-
 
   //function adds an X  for player 1 and an O for player 2 for the cell that is clicked
   function startGame() {
@@ -84,6 +82,7 @@ $(document).ready(function() {
     startGame();
   });
 
+  //clear score button function
   $("#clearScore").on('click', function() {
     document.getElementById("score1").innerHTML = " ";
     document.getElementById("score2").innerHTML = " ";
@@ -91,22 +90,20 @@ $(document).ready(function() {
     score2 = 0;
   });
 
-
-
+  //player 1 type name function
   $("#name1").keyup(updateName);
     function updateName() {
     var name = $("#name1").val();
     $("#input1").text(name);
     console.log("keyup! " + name);
-}
-
-$("#name2").keyup(updateNameTwo);
+  }
+  //player 2 type name function
+  $("#name2").keyup(updateNameTwo);
     function updateNameTwo() {
     var name = $("#name2").val();
     $("#input2").text(name);
     console.log("keyup! " + name);
-}
-
+  }
 });
 
 
