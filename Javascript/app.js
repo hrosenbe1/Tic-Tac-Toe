@@ -11,6 +11,8 @@ $(document).ready(function() {
   var score2 = 0;
   var audio = new Audio('5_Sec_Crowd_Cheer-Mike_Koenig-1562033255.mp3');
 
+
+
   //function adds an X  for player 1 and an O for player 2 for the cell that is clicked
   function startGame() {
     $($gameCells).one('click', function() {
@@ -25,11 +27,12 @@ $(document).ready(function() {
       }
       console.log(moves, count);
     });
+
     //calls the getWinner function
     getWinner();
   }
   //calls the startGame function
-  startGame();
+    startGame();
 
   //function gets the winner depending on which cells have X or O and then alerts who the winner is
   function getWinner() {
@@ -74,13 +77,13 @@ $(document).ready(function() {
   }
 
   //when New Game button is clicked the game is reset
-  $("#button").on('click', function() {
-    count = 0;
-    winner = "Default";
-    document.getElementById("winner").innerHTML = " ";
-    $($gameCells).empty();
-    startGame();
-  });
+    $("#button").on('click', function() {
+      count = 0;
+      winner = "Default";
+      document.getElementById("winner").innerHTML = " ";
+      $($gameCells).empty();
+      startGame();
+    });
 
   //clear score button function
   $("#clearScore").on('click', function() {
