@@ -26,7 +26,7 @@ I chose to make this game because this is my first app in Javascript/Jquery and 
 
 ##WireFrame:
 
-![](/Users/CodeMac/ga/wdi/Projects/Tic\ Tac\ Toe/ttt\ wireframe.png)
+![](./ttt wireframe.png)
 
 ##Future Developments:
 
