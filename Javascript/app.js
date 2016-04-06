@@ -48,7 +48,7 @@ $(document).ready(function() {
         score1++;
         audio.play();
         document.getElementById("winner").innerHTML = "<h1>Congratulations, Player 1 wins!</h1";
-        document.getElementById("score1").innerHTML = "<div>Player 1 has won " + score1 + " game(s)!</div>";
+        document.getElementById("score1").innerHTML = "<div> has won " + score1 + " game(s)!</div>";
         $($gameCells).off('click');
         //conditions for player 2 winning
       } else if ((winner !== PlayerOne) && $("#0").text() === PlayerTwo && $("#1").text() === PlayerTwo && $("#2").text() === PlayerTwo ||
@@ -63,7 +63,7 @@ $(document).ready(function() {
         score2++
         audio.play();
         document.getElementById("winner").innerHTML = "<h1>Congratulations, Player 2 wins!</h1>";
-        document.getElementById("score2").innerHTML = "<div>Player 2 has won " + score2 + " game(s)!</div>";
+        document.getElementById("score2").innerHTML = "<div> has won " + score2 + " game(s)!</div>";
         $($gameCells).off('click');
         //condition if there is no winner and the game is a tie
       } else if (count === 9 && winner !== "PlayerOne" && winner !== "PlayerTwo") {
@@ -86,9 +86,25 @@ $(document).ready(function() {
   $("#clearScore").on('click', function() {
     document.getElementById("score1").innerHTML = " ";
     document.getElementById("score2").innerHTML = " ";
+    document.getElementById("input1").innerHTML = " ";
+    document.getElementById("input2").innerHTML = " ";
     score1 = 0;
     score2 = 0;
   });
+
+  $("#name1").keyup(updateName);
+    function updateName() {
+    var name = $("#name1").val();
+    $("#input1").text(name);
+    console.log("keyup! " + name);
+}
+
+$("#name2").keyup(updateNameTwo);
+    function updateNameTwo() {
+    var name = $("#name2").val();
+    $("#input2").text(name);
+    console.log("keyup! " + name);
+}
 
 });
 

@@ -75,14 +75,48 @@ h1 {
   text-shadow: 2px 2px 2px white;
 }
 
-.XorO {
+#name1 {
   color: #48484b;
-  font-size: 27px;
-  text-shadow: 2px 2px 2px white;
-  margin-top: 182px;
+  border: #00b6aa solid 5px;
+  width: 200px;
+  height: 30px;
+  text-align: center;
+  text-shadow: 2px 2px 2px 000000;
+  font-size: 16px;
+  font-family: Montserrat;
+  border-radius: 15px;
+  box-shadow: 10px 10px 5px #000000;
   float: left;
-  margin-left: 100px;
-  padding: 10px;
+  outline: none;
+  margin-top: 135px;
+  margin-left: 90px;
+}
+
+#name2 {
+  color: #48484b;
+  border: #00b6aa solid 5px;
+  width: 200px;
+  height: 30px;
+  text-align: center;
+  text-shadow: 2px 2px 2px 000000;
+  font-size: 16px;
+  font-family: Montserrat;
+  border-radius: 15px;
+  box-shadow: 10px 10px 5px #000000;
+  float: left;
+  outline: none;
+  margin-top: 260px;
+  margin-left: -210px;
+}
+
+#input1 {
+  color: #48484b;
+  font-size: 20px;
+  text-shadow: 2px 2px 2px white;
+  float: right;
+  outline: none;
+  margin-right: 340px;
+  margin-top: -130px;
 }
 
 #score1 {
@@ -93,6 +127,16 @@ h1 {
   outline: none;
   margin-right: 140px;
   margin-top: -130px;
+}
+
+#input2 {
+  color: #48484b;
+  font-size: 20px;
+  text-shadow: 2px 2px 2px white;
+  float: right;
+  outline: none;
+  margin-right: 340px;
+  margin-top: -70px;
 }
 
 #score2 {
