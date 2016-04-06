@@ -32,6 +32,7 @@ $(document).ready(function() {
   }
   //calls the startGame function
   startGame();
+
   //function gets the winner depending on which cells have X or O and then alerts who the winner is
   function getWinner() {
     $($gameCells).on('click', function() {
@@ -86,11 +87,11 @@ $(document).ready(function() {
   $("#clearScore").on('click', function() {
     document.getElementById("score1").innerHTML = " ";
     document.getElementById("score2").innerHTML = " ";
-    document.getElementById("input1").innerHTML = " ";
-    document.getElementById("input2").innerHTML = " ";
     score1 = 0;
     score2 = 0;
   });
+
+
 
   $("#name1").keyup(updateName);
     function updateName() {

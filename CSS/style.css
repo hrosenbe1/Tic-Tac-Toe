@@ -14,7 +14,7 @@ body {
 
 #winner {
   color: #48484b;
-  margin: 40px 0px 0px 40px;
+  margin: 50px 0px 0px 40px;
   font-size: 10px;
   text-shadow: 2px 2px 2px white;
 }
@@ -82,6 +82,15 @@ h1 {
   font-size: 16px;
   margin-left: -200px;
   margin-top: 110px;
+}
+
+#play2 {
+  color: #48484b;
+  float: left;
+  text-shadow: 2px 2px 2px white;
+  font-size: 16px;
+  margin-left: -200px;
+  margin-top: 235px;
 }
 
 #name1 {
