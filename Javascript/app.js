@@ -47,7 +47,7 @@ $(document).ready(function() {
         winner = "PlayerOne";
         score1++;
         audio.play();
-        document.getElementById("winner").innerHTML = "<h1>Congratulations, Player 1 wins!</h1";
+        document.getElementById("winner").innerHTML = "<h1>Congratulations, O's win!</h1";
         document.getElementById("score1").innerHTML = "<div> has won " + score1 + " game(s)!</div>";
         $($gameCells).off('click');
         //conditions for player 2 winning
@@ -62,7 +62,7 @@ $(document).ready(function() {
         winner = "PlayerTwo";
         score2++
         audio.play();
-        document.getElementById("winner").innerHTML = "<h1>Congratulations, Player 2 wins!</h1>";
+        document.getElementById("winner").innerHTML = "<h1>Congratulations, X's win!</h1>";
         document.getElementById("score2").innerHTML = "<div> has won " + score2 + " game(s)!</div>";
         $($gameCells).off('click');
         //condition if there is no winner and the game is a tie
