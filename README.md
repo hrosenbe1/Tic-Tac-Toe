@@ -26,11 +26,11 @@ I chose to make this game because this is my first app in Javascript/Jquery and 
 
 ##WireFrame:
 
-![](/Users/CodeMac/ga/wdi/Projects/Tic\ Tac\ Toe/ttt\ wireframe.png)
+![](./ttt\ wireframe.png)
 
 ##Future Developments:
 
-- I would like to make this game responsive  
+- I would like to make this game responsive
 - I need to fix the New Game button bug if you hit New Game before a game is over
 
 
